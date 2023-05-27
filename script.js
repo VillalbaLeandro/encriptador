@@ -40,8 +40,8 @@ btnEncriptar.addEventListener("click", () => {
     const textoEncriptado = encriptarTexto(textoEntrada);
     textareaMensaje.value = textoEncriptado;
     textareaMensaje.style.backgroundImage = "none";
-    btnCopiar.style.display= "block";
-    ningunMensaje.style.display= "none";
+    btnCopiar.style.display = "block";
+    ningunMensaje.style.display = "none";
 });
 
 btnDesencriptar.addEventListener("click", () => {
@@ -49,8 +49,8 @@ btnDesencriptar.addEventListener("click", () => {
     const textoEncriptado = desencriptarTexto(textoEntrada);
     textareaMensaje.value = textoEncriptado;
     textareaMensaje.style.backgroundImage = "none";
-    btnCopiar.style.display= "block"
-    ningunMensaje.style.display= "none";
+    btnCopiar.style.display = "block"
+    ningunMensaje.style.display = "none";
 
 });
 
@@ -63,16 +63,20 @@ btnCopiar.addEventListener("click", () => {
 
 textareaMensaje.addEventListener("focus", () => {
     textareaMensaje.style.backgroundImage = "none";
-    btnCopiar.style.display= "block"
-    ningunMensaje.style.display= "none";
+    btnCopiar.style.display = "block"
+    ningunMensaje.style.display = "none";
 
 
 })
 textareaMensaje.addEventListener("blur", () => {
     if (textareaMensaje.value.trim() === "") {
-      textareaMensaje.style.backgroundImage = "";
-    ningunMensaje.style.display= "block";
-    
+        textareaMensaje.style.backgroundImage = "";
+        if (window.matchMedia("(min-width: 1024px)").matches) {
+            ningunMensaje.style.display = "none";
+        } else{
+            ningunMensaje.style.display = "block";
+            
+        }
+
     }
-  });
-  
+});
