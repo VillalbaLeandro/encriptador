@@ -25,7 +25,9 @@ function desencriptarTexto(textoEncriptado) {
 
     return texto;
 }
-
+if (window.matchMedia("(min-width: 1024px)").matches) {
+    ningunMensaje.style.display = "none";
+}
 // Obtener los elementos del DOM
 const textareaEntrada = document.querySelector(".text-area");
 const textareaMensaje = document.querySelector(".mensaje");
