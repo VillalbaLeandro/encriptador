@@ -154,7 +154,14 @@ main {
     color: #495057;
     font-size: 18px;
 }
-
+footer{
+    text-align: center;
+    font-size: 44px;
+}
+footer a{
+  color:   #0A3871;
+  margin: 10px;
+}
 
 @media (min-width: 767px) {
     .parrafo-container p {
